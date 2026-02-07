@@ -2,7 +2,6 @@ import path from 'path';
 import express from 'express';
 
 const app = express();
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'views'));
@@ -24,6 +23,4 @@ app.post('/signup', (req, res) => {
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.listen(PORT, () => {
-  console.log(`Web3D running on http://localhost:${PORT}`);
-});
+export default app;
