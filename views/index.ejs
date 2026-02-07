@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="brand">Web3D Demo</div>
+    <div class="hint">Click c?a d? vào. Click qu?y l? tân d? m? form.</div>
+  </div>
+
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Ðóng">×</button>
+      <h2>Ðang ký thông tin</h2>
+      <form id="signupForm">
+        <label>
+          H? và tên
+          <input name="fullName" type="text" placeholder="Nguy?n Van A" required />
+        </label>
+        <label>
+          S? di?n tho?i
+          <input name="phone" type="tel" placeholder="0901 234 567" required />
+        </label>
+        <label>
+          D?ch v? quan tâm
+          <select name="service" required>
+            <option value="">Ch?n d?ch v?</option>
+            <option value="tu-van">Tu v?n</option>
+            <option value="bao-gia">Báo giá</option>
+            <option value="dang-ky">Ðang ký</option>
+          </select>
+        </label>
+        <label>
+          Ghi chú
+          <textarea name="note" rows="3" placeholder="Nh?p yêu c?u..."></textarea>
+        </label>
+        <button type="submit">G?i thông tin</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <canvas id="scene"></canvas>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
